@@ -1,59 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azul_escuro"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Space
+    <!-- Imagem de fundo ajustada na parte inferior -->
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/trilharcapa05" /> <!-- Substitua "trilharcapa05" pelo nome da sua imagem -->
+
+    <!-- Conteúdo do login com fundo azul -->
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T R I L H A R"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="15dp">
+        android:padding="16dp"
+        android:layout_gravity="top"
+        android:background="@color/azul_escuro">
 
-        <TextView
-            android:id="@+id/logo"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+        </LinearLayout>
+
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="T R I L H A R"
-            android:textColor="@color/white"
-            android:textSize="40sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:padding="1dp">
+        </FrameLayout>
+
     </LinearLayout>
 
-
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="1dp"
-        android:background="@color/white">
-
+    <!-- Botão do Google na parte de baixo sobrepondo a imagem -->
     <LinearLayout
         android:id="@+id/btnGoogleSignIn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="66dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="32dp"
+        android:background="@color/azul_escuro"
         android:gravity="center"
+        android:onClick="signInWithGoogle"
         android:orientation="horizontal"
-        android:padding="16dp"
-        android:background="@drawable/btn_google"
-        android:onClick="signInWithGoogle">
+        android:padding="16dp"> <!-- Ajuste a margem conforme necessário -->
 
         <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="34dp"
+            android:layout_height="39dp"
             android:src="@drawable/ic_google"
             app:tint="@color/white" />
 
@@ -64,13 +79,6 @@
             android:text="Entre com a conta Google"
             android:textColor="@color/white"
             android:textSize="18sp" />
-
     </LinearLayout>
+
 </FrameLayout>
-
-
-<Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-</LinearLayout>
