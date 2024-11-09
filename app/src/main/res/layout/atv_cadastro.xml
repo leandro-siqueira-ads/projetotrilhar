@@ -16,8 +16,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/azul_escuro"
-        tools:ignore="ExtraText">
+        android:background="@color/azul_escuro">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -25,8 +24,7 @@
             android:layout_height="wrap_content"
             android:background="@color/azul_escuro"
             android:theme="?attr/actionBarTheme"
-            android:title=""
-            android:layout_alignParentStart="true" />
+            android:title="" />
 
         <ImageView
             android:id="@+id/toolbarLogo"
@@ -37,23 +35,15 @@
             android:layout_centerInParent="true" />
     </RelativeLayout>
 
-    <FrameLayout
+    <TextView
+        android:id="@+id/Mod1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:background="@color/azul_escuro">
-
-        <TextView
-            android:id="@+id/Mod1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/azul_escuro"
-            android:gravity="center"
-            android:text="Cadastro de Despesa"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
-    </FrameLayout>
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Cadastro de Despesa"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -75,7 +65,8 @@
                 android:layout_height="wrap_content"
                 android:inputType="none"
                 android:textSize="16sp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -83,10 +74,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:foregroundGravity="center"
             android:src="@drawable/ic_modal"
-            app:backgroundTint="@color/azul_escuro"
-            app:tint="@color/white" />
+            app:backgroundTint="@color/white"
+            app:tint="@color/black" />
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -101,7 +91,6 @@
             android:id="@+id/edtDescricao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:inputType="text"
             android:textSize="16sp"
             android:textColor="@color/white" />
@@ -117,26 +106,25 @@
         <ImageView
             android:id="@+id/imgCalendario"
             android:layout_width="38dp"
-            android:layout_height="match_parent"
+            android:layout_height="38dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="8dp"
             android:contentDescription="Ícone de calendário"
-            android:src="@drawable/ic_calendar" />
+            android:src="@drawable/ic_calendar"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:hint="Vencimento"
-            android:gravity="center"
             android:textColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edtVencimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:inputType="date"
                 android:textSize="16sp"
                 android:textColor="@color/white"
@@ -169,17 +157,18 @@
 
         <ImageView
             android:id="@+id/imgDespesaStatus"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="0dp"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
             android:contentDescription="Status da despesa"
-            android:src="@drawable/naopago" />
+            android:src="@drawable/naopago"
+            />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="09dp"
+        android:layout_marginTop="8dp"
         android:orientation="horizontal">
 
         <Button
@@ -189,7 +178,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginEnd="6dp"
-            android:backgroundTint="@color/azul_escuro"
+            android:backgroundTint="@color/vermelho"
             android:text="EXCLUIR"
             android:textColor="@color/white" />
 
@@ -199,9 +188,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="@color/azul_escuro"
+            android:backgroundTint="@color/white"
             android:text="SALVAR"
-            android:textColor="@color/white" />
+            android:textColor="@color/azul_escuro" />
     </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -215,11 +204,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtValor"
             android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:clickable="false"
-            android:focusable="false"
-            android:gravity="center"
+            android:layout_height="wrap_content"
             android:inputType="numberDecimal"
+            android:gravity="center"
             android:text="R$0,00"
             android:textColor="@color/white"
             android:textSize="20sp" />
@@ -232,7 +219,6 @@
         android:orientation="vertical"
         android:gravity="center">
 
-        <!-- Linha de botões -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -395,11 +381,17 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Space
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/btn_cal" />
+                android:textColor="#757575"
+                android:textSize="20sp"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:onClick="onNumberClick" />
 
             <TextView
                 android:id="@+id/button0"
@@ -428,7 +420,9 @@
                 android:clickable="true"
                 android:elevation="3dp"
                 android:focusable="true"
-                android:gravity="center" />
+                android:gravity="center"
+                android:onClick="onEraseClick" />
         </LinearLayout>
     </LinearLayout>
+
 </LinearLayout>
