@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+.idea
+caches
+daemon
+jdks
+native
+wrapper
